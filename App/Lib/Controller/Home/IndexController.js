@@ -8,6 +8,10 @@ module.exports = Controller("Home/BaseController", function(){
     indexAction: function(){
       //render View/Home/index_index.html file
       this.display();
+    },
+    statusAction:function (){
+    	this.end("status");	
+    	//this.display("Home:status:s");
     }
   };
 });
