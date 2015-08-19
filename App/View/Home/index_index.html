@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title></title>
-		<style>
-			
-		</style>
-		<link rel="stylesheet" type="text/css" href="/resource/css/index/index.css">
-		<script>
-			
-		</script>
-	</head>
-
-	<body>
-		开启
-	</body>
-</html>
+<ul>
+	<% userList.forEach(function (item,index){ %>
+		<li>第<%=item.id%>条,名字为：<%=item.name%></li>		
+	<% }) %>
+</ul>
