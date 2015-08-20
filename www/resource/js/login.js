@@ -11,9 +11,9 @@ $(function (){
 				$("#error").text("用户名已经注册");
 			}else{
 				$("#error").text("可以注册");
+				window.open("/","_self");
 			}
 		});
 	});;
 
 });
-
