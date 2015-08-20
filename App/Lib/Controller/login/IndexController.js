@@ -13,12 +13,17 @@ module.exports = Controller("Home/BaseController", function(){
         var self = this;
         //console.log(  );
           //this.end(self.isGet()); 
-
-          if( self.isPost ){
+          console.log( self.referer() );
+          if( self.isPost() ){
             var userName = self.post("user");
             var password = self.post("password");
-            console.log( userName );
+           
+           this.cookie("name","login");
+
+           this.cookie("value",userNames);
+
             D("user").where({name:userName}).find().then(function (data){
+             
                if( !data.name ){
                   D("user").add({
                     name:userName
@@ -30,8 +35,6 @@ module.exports = Controller("Home/BaseController", function(){
             });
             
           };
-
-         // this.end({isOk:true});
     }
   };
 });

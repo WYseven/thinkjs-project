@@ -8,4 +8,7 @@ module.exports = {
   db_user: 'root', // 用户名
   db_pwd: '', // 密码
   db_prefix: 'think_', // 数据库表前缀
+  cookie_domain: "", //cookie有效域名
+	cookie_path: "/",   //cookie路径
+	cookie_timeout: 0, //cookie失效时间，0为浏览器关闭，单位：秒
 };
