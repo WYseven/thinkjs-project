@@ -15,13 +15,12 @@ module.exports = Controller("Home/BaseController", function(){
       console.dir( userList );
 
       //将数据库中的值传入userList变量中
-     self.assign('userList', userList);
+      self.assign('userList', userList);
       //渲染到页面上，默认会渲染index_index.html页面
       self.display();
     },
-    statusAction:function (){
-    	this.end("status");	
-    	//this.display("Home:status:s");
+    loginAction:function (){
+      this.end("login2");    
     }
   };
 });

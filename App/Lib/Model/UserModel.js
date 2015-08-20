@@ -8,7 +8,6 @@ module.exports = Model( function (){
     		var self = this;
 
     		return self.select().then(function (data){
-    			console.log( data );
     				return data;
     		});	
     	}

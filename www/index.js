@@ -9,3 +9,5 @@ global.ROOT_PATH = __dirname;
 global.APP_DEBUG = true;
 //加载thinkjs启动服务
 require('thinkjs');
+
+
