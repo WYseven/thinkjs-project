@@ -2,16 +2,15 @@ module.exports = Controller("Home/BaseController",function (){
 	"use strict"
 	return {
 		indexAction:function (){
+			var self = this;
 			this.session("userInfo").then(function (data){
-				console.log( isEmpty(data) );	
+				if( isEmpty(data) ){
+					self.redirect("/login/");
+				}else{
+					self.assign("userName",data);
+					self.display();
+				}
 			});
-			// if( this.cookie("userName") !== "" ){
-			// 	this.display();
-			// }else{
-			// 	this.display("login/index_index.html");
-			// }
-
-			this.end()
 		}
 	}	
 });

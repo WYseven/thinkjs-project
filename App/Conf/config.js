@@ -11,4 +11,5 @@ module.exports = {
   cookie_domain: "", //cookie有效域名
 	cookie_path: "/",   //cookie路径
 	cookie_timeout: 0, //cookie失效时间，0为浏览器关闭，单位：秒
+  session_timeout: 0
 };

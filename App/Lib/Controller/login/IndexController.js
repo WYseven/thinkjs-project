@@ -25,10 +25,10 @@ module.exports = Controller("Home/BaseController", function(){
                   D("user").add({
                     name:userName
                   });
-                  this.cookie("userName",userName);
-                  self.end({isOk:false});
+                  self.session("userInfo",userName);
+                  self.success({isOk:false});
                }else{
-                  self.end({isOk:true});
+                  self.error({isOk:true});
                }
             });
             
