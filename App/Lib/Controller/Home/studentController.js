@@ -2,12 +2,16 @@ module.exports = Controller("Home/BaseController",function (){
 	"use strict"
 	return {
 		indexAction:function (){
+			
+		      self.display();
+		},
+		student_20150908Action:function(){
 			var self = this;
-		      var userModel = D('student_20150908');
-		      userModel.field().select().then(function(data){
-		      	self.assign( "student_name",data );
-		      	 self.display();
-		      })
+		  var userModel = D('student_20150908');
+		  userModel.field().select().then(function(data){
+		  	self.assign( "student_name",data );
+		  	 self.display("Home/student_20150908.html");
+		  });
 		},
 		addStudentAction:function(){
 			var self  = this;
