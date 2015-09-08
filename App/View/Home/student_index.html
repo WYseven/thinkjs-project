@@ -1,0 +1,13 @@
+<script type="text/javascript" src="/resource/js/src/jquery2.js"></script>
+<script type="text/javascript" src="/resource/js/src/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="/resource/js/comm/isCookie.js"></script>
+
+<input type="text" name="user" id="userName" />
+<input type="button" value="提交" id="send" />
+<span id="error"></span><br />
+
+<% student_name.forEach(function (item,index){ %>
+	<%= item.id %>,<%= item.student_name %><br />
+<% }) %>
+
+<script type="text/javascript" src="/resource/js/add_student.js"></script>

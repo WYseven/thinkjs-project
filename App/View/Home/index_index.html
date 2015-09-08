@@ -1,5 +1,21 @@
-<ul>
-	<% userList.forEach(function (item,index){ %>
-		<li>第<%=item.id%>条,名字为：<%=item.name%></li>		
+<link rel="stylesheet" href="/resource/css/index/bootstrap.css" />
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>
+      	<label for="checkbox">
+      		<input type="checkbox" id="checkbox" />
+      		全选
+      	</label>
+      </th>
+      <th>编号</th>
+      <th>姓名</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% userList.forEach(function (item,index){ %>
+		<tr><td><input type="checkbox" /></td><td><%=item.id%></td><td><%=item.name%></td></tr>	
 	<% }) %>
-</ul>
+  </tbody>
+</table>
